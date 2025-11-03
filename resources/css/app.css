@@ -1,0 +1,44 @@
+/* ==============================
+   Fonts
+============================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ==============================
+   Vendor CSS
+============================== */
+/* SimpleBar */
+/*@import './css/simplebar.min.css';*/
+@import url('https://cdn.jsdelivr.net/npm/simplebar@6/dist/simplebar.min.css');
+
+/* Tiny Slider */
+/*@import './css/tiny-slider.css';*/
+@import url('https://cdn.jsdelivr.net/npm/tiny-slider@2/dist/tiny-slider.css');
+
+/* Swiper */
+/*@import './css/swiper.css';*/
+@import url('https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css');
+/* ==============================
+   Theme CSS
+============================== */
+@import './theme.css';
+
+
+ /*Optional: Tabler Icons via CDN (if not included in app.css)*/
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.46.0/tabler-icons.min.css');
+
+
+
+.zoom {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: 200%; /* Zoom strength */
+    transition: background-position 0.1s ease;
+}
+
+    .zoom img {
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 0; /* Hide the <img> element, only used for layout */
+    }

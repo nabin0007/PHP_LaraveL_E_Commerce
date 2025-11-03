@@ -1,0 +1,21 @@
+/* ==============================
+   Fonts
+============================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ==============================
+   Vendor CSS
+============================== */
+/* SimpleBar */
+@import './simplebar.min.css';
+
+/* Tiny Slider */
+@import './tiny-slider.css';
+
+/* Swiper */
+@import './swiper-bundle.min.css';
+
+/* ==============================
+   Theme CSS
+============================== */
+@import './theme.css';
