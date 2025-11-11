@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Category extends Model
 {
@@ -12,5 +13,38 @@ class Category extends Model
     protected $fillable = [
         'name',
         'slug',
+        'image',
+        'link',
+        'active',
+        'sort_order',
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($category) {
+            if (empty($category->slug)) {
+                $category->slug = Str::slug($category->name);
+            }
+        });
+
+        static::updating(function ($category) {
+            if (empty($category->slug)) {
+                $category->slug = Str::slug($category->name);
+            }
+        });
+    }
+
+    // Scope for active categories
+    public function scopeActive($query)
+    {
+        return $query->where('active', true);
+    }
+
+    // Relation to products
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

@@ -20,7 +20,7 @@ use Illuminate\Support\Str;
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="{{ route('register') }}" class="needs-validation" novalidate>
+              <form method="POST" action="{{ route('register') }}" class="needs-validation" novalidate>
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="mb-2 block text-gray-800">Name</label>
@@ -96,8 +96,8 @@ use Illuminate\Support\Str;
 
             <div class="modal-body">
 
-                <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate>
-                    @csrf
+              <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate>
+    @csrf
                     <div class="mb-3">
                         <label for="loginEmail" class="mb-2 block text-gray-800">Email address</label>
                         <input type="email"

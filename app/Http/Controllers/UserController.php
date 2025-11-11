@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+
+    public function showRegisterForm()
+    {
+        return view('auth.register'); // Or whatever view contains the modal/form
+    }
     public function register(Request $request)
     {
         $request->validate([
@@ -18,14 +23,20 @@ class UserController extends Controller
         ]);
 
         User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => Hash::make($request->input('password')),
         ]);
 
         return redirect()->back()->with('success', 'Account created successfully!');
     }
 
+
+
+    public function showLoginForm()
+    {
+        return view('auth.login'); // or your modal partial
+    }
     public function login(Request $request)
     {
         $credentials = $request->validate([
