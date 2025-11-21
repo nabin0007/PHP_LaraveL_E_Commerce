@@ -21,7 +21,7 @@
             @foreach($bannerSectionsHorizontal as $section)
             <div class="w-full md:w-1/2 mb-3">
                 <div class="py-10 px-8 rounded-lg"
-                    style="background: url('{{ asset($section->banner_image) }}') no-repeat; background-size: cover; background-position: center;">
+                    style="background: url('{{asset($section->banner_image)}}') no-repeat; background-size: cover; background-position: center;" loading="lazy">
 
                     <div class="flex flex-col gap-5">
                         <div class="flex flex-col gap-1">

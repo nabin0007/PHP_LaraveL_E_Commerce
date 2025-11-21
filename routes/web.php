@@ -59,3 +59,10 @@ use App\Http\Controllers\BannerSectionController;
 //use App\Http\Controllers\ProductController;
 
 //Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+
+use App\Helpers\ImageOptimizer;
+
+Route::get('/optimize-images', function () {
+    ImageOptimizer::bulkOptimize('assets/images', 1280, 720);
+    return 'All images optimized!';
+});

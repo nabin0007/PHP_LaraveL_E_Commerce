@@ -9,7 +9,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="resources\views\admin\" />
-    <Folder Include="resources\views\NewFolder\" />
     <Folder Include="resources\views\products\" />
   </ItemGroup>
 </Project>
